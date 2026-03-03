@@ -9,17 +9,44 @@ type Project = {
 
 function ProjectCard({ p }: { p: Project }) {
   return (
-    <div className="rounded-lg border border-zinc-800 p-6">
+    <div
+      className="
+      group
+      rounded-lg
+      border border-zinc-800
+      p-6
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:border-zinc-600
+      hover:shadow-lg
+      hover:shadow-black/30
+    "
+    >
       <div className="flex items-start justify-between gap-4">
         <div>
-          <h3 className="text-lg font-medium">{p.title}</h3>
+          <h3 className="text-lg font-medium group-hover:text-white transition">
+            {p.title}
+          </h3>
+
           {p.subtitle ? (
             <p className="mt-1 text-sm text-zinc-500">{p.subtitle}</p>
           ) : null}
         </div>
 
         {p.status ? (
-          <span className="text-xs px-2 py-1 rounded-full border border-zinc-800 text-zinc-400">
+          <span
+            className="
+            text-xs
+            px-2
+            py-1
+            rounded-full
+            border border-zinc-800
+            text-zinc-400
+            group-hover:border-zinc-700
+            transition
+          "
+          >
             {p.status}
           </span>
         ) : null}
@@ -35,7 +62,14 @@ function ProjectCard({ p }: { p: Project }) {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm underline underline-offset-4 text-zinc-300 hover:text-white transition"
+              className="
+              text-sm
+              underline
+              underline-offset-4
+              text-zinc-300
+              hover:text-white
+              transition
+            "
             >
               {l.label}
             </a>
