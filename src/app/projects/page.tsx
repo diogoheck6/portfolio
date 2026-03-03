@@ -35,8 +35,6 @@ function ProjectCard({ p }: { p: Project }) {
             <a
               key={l.href}
               href={l.href}
-              target="_blank"
-              rel="noreferrer"
               className="text-sm underline underline-offset-4 text-zinc-300 hover:text-white transition"
             >
               {l.label}
@@ -51,30 +49,35 @@ function ProjectCard({ p }: { p: Project }) {
 export default function Projects() {
   const realWorld: Project[] = [
     {
-      title: "Accounting Automation Systems",
-      subtitle: "Automation & business operations (internal/private)",
+      title: "SPED Cross-Check Automation",
+      subtitle: "Fiscal validation workflow (internal/private)",
       status: "Private",
       description:
-        "Designed and implemented Python automation systems for accounting and tax operations. Built cross-referencing tools to parse SPED files and integrate data from government tax authorities and public fiscal databases. Developed large-scale web scraping routines to download and process 1,000+ monthly government reports, automating validation workflows and reducing up to 3 hours of manual work per analyst.",
-      tech: "Python • Automation • Data Processing • Web Scraping",
+        "Automated the download of fiscal files, parsed SPED data, cross-referenced information across sources, and generated Excel reports for validation — reducing up to ~3 hours of manual work per analyst.",
+      tech: "Python • SPED Parsing • Web Scraping • Excel Reports",
+      links: [{ label: "Case study", href: "/projects/sped-automation" }],
+    },
+    {
+      title: "Government Reports Automation",
+      subtitle: "Large-scale scraping & processing (internal/private)",
+      status: "Private",
+      description:
+        "Automation routines to download and process a high volume of monthly government and municipal reports, supporting scalable data collection and validation workflows.",
+      tech: "Python • Web Scraping • Pipelines • Data Processing",
+      links: [{ label: "Case study", href: "/projects/reports-automation" }],
     },
   ];
 
   const personal: Project[] = [
     {
-      title: "Coming soon",
+      title: "GitHub Repository Explorer",
+      subtitle: "API integration + search/filter UX",
       status: "Planned",
       description:
-        "Public projects will be published here with GitHub repositories and live demos.",
-      tech: "TypeScript • React • Next.js • Node.js",
+        "Explore GitHub repositories using the public GitHub API with search, filters, pagination and a clean UI.",
+      tech: "Next.js • TypeScript • React • GitHub API",
+      links: [{ label: "Case study", href: "/projects/github-explorer" }],
     },
-
-    /*
-    Future Personal Projects (inspired by Filipe Deschamps)
-    1) Markdown Editor (keyboard-first, accessibility)
-    2) GitHub Repository Explorer (Octokit API, search/filter)
-    3) CPU Monitor (backend metrics + WebSocket real-time UI)
-    */
   ];
 
   const experiments: Project[] = [
@@ -85,6 +88,12 @@ export default function Projects() {
         "Small experiments while learning new technologies and patterns (state management, server components, websockets, testing).",
       tech: "React • Next.js • Architecture • Testing",
     },
+
+    /*
+    Future Personal Projects (inspired by Filipe Deschamps)
+    1) Markdown Editor (keyboard-first, accessibility)
+    2) CPU Monitor (backend metrics + WebSocket real-time UI)
+    */
   ];
 
   return (

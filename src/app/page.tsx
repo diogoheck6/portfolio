@@ -33,7 +33,6 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Small highlight = looks pro */}
         <div className="mt-12 grid gap-4 sm:grid-cols-3">
           <div className="rounded-lg border border-zinc-800 p-5">
             <p className="text-sm font-medium">Focus</p>
@@ -54,6 +53,32 @@ export default function Home() {
             <p className="mt-2 text-sm text-zinc-400">
               Expanding into TypeScript/React/Next.js for modern interfaces.
             </p>
+          </div>
+        </div>
+
+        {/* ✅ Featured Project (pro look) */}
+        <div className="mt-14">
+          <p className="text-sm font-medium">Featured Project</p>
+
+          <div className="mt-3 rounded-lg border border-zinc-800 p-6">
+            <p className="text-lg font-medium">SPED Cross-Check Automation</p>
+            <p className="mt-2 text-zinc-400 text-sm leading-relaxed">
+              Automated fiscal file downloads, SPED parsing, cross-checking and
+              Excel reporting — reducing up to ~3 hours of manual work per
+              analyst.
+            </p>
+            <p className="mt-3 text-zinc-500 text-sm">
+              Python • SPED Parsing • Web Scraping • Excel Reports
+            </p>
+
+            <div className="mt-5">
+              <Link
+                href="/projects/sped-automation"
+                className="text-sm underline underline-offset-4 text-zinc-300 hover:text-white transition"
+              >
+                Read case study →
+              </Link>
+            </div>
           </div>
         </div>
 
