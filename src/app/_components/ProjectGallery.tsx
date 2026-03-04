@@ -1,3 +1,4 @@
+//  src/app/_components/ProjectGallery.tsx
 import Image from "next/image";
 
 export function ProjectGallery({

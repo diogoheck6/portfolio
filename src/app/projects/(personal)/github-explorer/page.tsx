@@ -1,3 +1,4 @@
+//  src/app/projects/(personal)/github-explorer/page.tsx
 import Link from "next/link";
 
 function Badge({ text }: { text: string }) {

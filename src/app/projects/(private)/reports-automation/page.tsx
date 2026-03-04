@@ -1,3 +1,4 @@
+//  src/app/projects/(private)/reports-automation/page.tsx
 import Link from "next/link";
 
 export default function ReportsAutomationProject() {

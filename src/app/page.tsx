@@ -1,3 +1,4 @@
+// src/app/page.tsx
 import Link from "next/link";
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
     <section className="py-20">
       <div className="max-w-3xl">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
-          Software Developer
+          Python Automation Engineer
         </h1>
 
         <p className="mt-5 text-zinc-400 text-lg leading-relaxed">
@@ -13,8 +14,15 @@ export default function Home() {
           improve operational efficiency.
         </p>
 
+        <p className="mt-5 inline-flex items-center gap-2 rounded-md border border-zinc-800 bg-zinc-900/30 px-3 py-2 text-sm text-zinc-200">
+          <span className="text-zinc-400">Impact:</span>
+          Automations I built have reduced up to{" "}
+          <span className="font-semibold">~3 hours</span> of manual work per
+          analyst.
+        </p>
+
         <p className="mt-3 text-zinc-500 text-sm">
-          Python • TypeScript • Node.js • React • Next.js
+          Python • Automation • APIs • SQL • TypeScript • Next.js
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4">
@@ -44,28 +52,28 @@ export default function Home() {
           <div className="rounded-lg border border-zinc-800 p-5">
             <p className="text-sm font-medium">Background</p>
             <p className="mt-2 text-sm text-zinc-400">
-              5 years with Python automation and data-processing systems.
+              5 years building Python automation and data-processing systems.
             </p>
           </div>
 
           <div className="rounded-lg border border-zinc-800 p-5">
             <p className="text-sm font-medium">Now</p>
             <p className="mt-2 text-sm text-zinc-400">
-              Expanding into TypeScript/React/Next.js for modern interfaces.
+              Building dashboards and automation platforms with Next.js + APIs.
             </p>
           </div>
         </div>
 
-        {/* ✅ Featured Project (pro look) */}
+        {/* Featured Project */}
         <div className="mt-14">
           <p className="text-sm font-medium">Featured Project</p>
 
           <div className="mt-3 rounded-lg border border-zinc-800 p-6">
             <p className="text-lg font-medium">SPED Cross-Check Automation</p>
             <p className="mt-2 text-zinc-400 text-sm leading-relaxed">
-              Automated fiscal file downloads, SPED parsing, cross-checking and
-              Excel reporting — reducing up to ~3 hours of manual work per
-              analyst.
+              Automated SPED parsing, government data collection,
+              cross-checking, and Excel reporting — reducing up to ~3 hours of
+              manual work per analyst.
             </p>
             <p className="mt-3 text-zinc-500 text-sm">
               Python • SPED Parsing • Web Scraping • Excel Reports
@@ -83,7 +91,7 @@ export default function Home() {
         </div>
 
         <p className="mt-10 text-xs text-zinc-600">
-          Portfolio under construction — more projects coming soon.
+          Portfolio under construction — more case studies coming soon.
         </p>
       </div>
     </section>

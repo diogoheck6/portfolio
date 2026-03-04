@@ -1,182 +1,19 @@
-type Project = {
-  title: string;
-  subtitle?: string;
-  description: string;
-  tech: string;
-  status?: "Private" | "Public" | "Planned";
-  links?: { label: string; href: string }[];
-};
+// src/app/projects/page.tsx
+import { ProjectTabs } from "@/app/_components/projects/ProjectTabs";
+import { projects } from "@/app/projects/projects.data";
 
-function ProjectCard({ p }: { p: Project }) {
-  return (
-    <div
-      className="
-      group
-      rounded-lg
-      border border-zinc-800
-      p-6
-      transition-all
-      duration-300
-      hover:-translate-y-1
-      hover:border-zinc-600
-      hover:shadow-lg
-      hover:shadow-black/30
-    "
-    >
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h3 className="text-lg font-medium group-hover:text-white transition">
-            {p.title}
-          </h3>
-
-          {p.subtitle ? (
-            <p className="mt-1 text-sm text-zinc-500">{p.subtitle}</p>
-          ) : null}
-        </div>
-
-        {p.status ? (
-          <span
-            className="
-            text-xs
-            px-2
-            py-1
-            rounded-full
-            border border-zinc-800
-            text-zinc-400
-            group-hover:border-zinc-700
-            transition
-          "
-          >
-            {p.status}
-          </span>
-        ) : null}
-      </div>
-
-      <p className="mt-3 text-zinc-400 leading-relaxed">{p.description}</p>
-
-      <p className="mt-4 text-sm text-zinc-500">{p.tech}</p>
-
-      {p.links?.length ? (
-        <div className="mt-5 flex flex-wrap gap-4">
-          {p.links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="
-              text-sm
-              underline
-              underline-offset-4
-              text-zinc-300
-              hover:text-white
-              transition
-            "
-            >
-              {l.label}
-            </a>
-          ))}
-        </div>
-      ) : null}
-    </div>
-  );
-}
-
-export default function Projects() {
-  const realWorld: Project[] = [
-    {
-      title: "SPED Cross-Check Automation",
-      subtitle: "Fiscal validation workflow (internal/private)",
-      status: "Private",
-      description:
-        "Automated the download of fiscal files, parsed SPED data, cross-referenced information across sources, and generated Excel reports for validation — reducing up to ~3 hours of manual work per analyst.",
-      tech: "Python • SPED Parsing • Web Scraping • Excel Reports",
-      links: [{ label: "Case study", href: "/projects/sped-automation" }],
-    },
-    {
-      title: "Government Reports Automation",
-      subtitle: "Large-scale scraping & processing (internal/private)",
-      status: "Private",
-      description:
-        "Automation routines to download and process a high volume of monthly government and municipal reports, supporting scalable data collection and validation workflows.",
-      tech: "Python • Web Scraping • Pipelines • Data Processing",
-      links: [{ label: "Case study", href: "/projects/reports-automation" }],
-    },
-  ];
-
-  const personal: Project[] = [
-    {
-      title: "GitHub Repository Explorer",
-      subtitle: "API integration + search/filter UX",
-      status: "Planned",
-      description:
-        "Explore GitHub repositories using the public GitHub API with search, filters, pagination and a clean UI.",
-      tech: "Next.js • TypeScript • React • GitHub API",
-      links: [{ label: "Case study", href: "/projects/github-explorer" }],
-    },
-  ];
-
-  const experiments: Project[] = [
-    {
-      title: "Learning Lab (WIP)",
-      status: "Planned",
-      description:
-        "Small experiments while learning new technologies and patterns (state management, server components, websockets, testing).",
-      tech: "React • Next.js • Architecture • Testing",
-    },
-
-    /*
-    Future Personal Projects (inspired by Filipe Deschamps)
-    1) Markdown Editor (keyboard-first, accessibility)
-    2) CPU Monitor (backend metrics + WebSocket real-time UI)
-    */
-  ];
-
+export default function ProjectsPage() {
   return (
     <section className="py-16">
-      <div className="max-w-4xl">
+      <div className="max-w-5xl">
         <h1 className="text-3xl font-semibold">Projects</h1>
+
         <p className="mt-3 text-zinc-400">
-          A mix of real-world experience, personal projects, and experiments.
+          Automation systems and public demos — built with a focus on clean
+          architecture and real operational impact.
         </p>
 
-        <div className="mt-10">
-          <h2 className="text-xl font-semibold">Real-World Experience</h2>
-          <p className="mt-2 text-zinc-500 text-sm">
-            Projects built in professional environments. Source code may be
-            private.
-          </p>
-
-          <div className="mt-5 grid gap-5">
-            {realWorld.map((p) => (
-              <ProjectCard key={p.title} p={p} />
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-14">
-          <h2 className="text-xl font-semibold">Personal Projects</h2>
-          <p className="mt-2 text-zinc-500 text-sm">
-            Public projects with GitHub links and live demos.
-          </p>
-
-          <div className="mt-5 grid gap-5">
-            {personal.map((p) => (
-              <ProjectCard key={p.title} p={p} />
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-14">
-          <h2 className="text-xl font-semibold">Experiments / Learning Lab</h2>
-          <p className="mt-2 text-zinc-500 text-sm">
-            Small experiments created while learning.
-          </p>
-
-          <div className="mt-5 grid gap-5">
-            {experiments.map((p) => (
-              <ProjectCard key={p.title} p={p} />
-            ))}
-          </div>
-        </div>
+        <ProjectTabs projects={projects} />
       </div>
     </section>
   );
