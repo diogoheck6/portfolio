@@ -14,11 +14,13 @@ export default function Home() {
           improve operational efficiency.
         </p>
 
-        <p className="mt-5 inline-flex items-center gap-2 rounded-md border border-zinc-800 bg-zinc-900/30 px-3 py-2 text-sm text-zinc-200">
+        <p className="mt-5 flex flex-wrap items-center gap-2 rounded-md border border-zinc-800 bg-zinc-900/30 px-3 py-2 text-sm text-zinc-200 w-fit">
           <span className="text-zinc-400">Impact:</span>
-          Automations I built have reduced up to{" "}
-          <span className="font-semibold">~3 hours</span> of manual work per
-          analyst.
+          <span>
+            Automations I built have reduced up to{" "}
+            <span className="font-semibold">~3 hours</span> of manual work per
+            analyst.
+          </span>
         </p>
 
         <p className="mt-3 text-zinc-500 text-sm">
