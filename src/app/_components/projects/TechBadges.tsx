@@ -1,5 +1,3 @@
-// src/app/_components/projects/TechBadges.tsx
-
 import { Badge } from "@/app/_components/ui/Badge";
 import {
   SiPython,
@@ -38,8 +36,8 @@ export function TechBadges({ tech }: { tech: string[] }) {
 
         return (
           <Badge key={t}>
-            <span className="inline-flex items-center gap-2">
-              {icon && <span className="text-sm">{icon}</span>}
+            <span className="flex items-center gap-2">
+              {icon ? <span className="text-sm">{icon}</span> : null}
               {t}
             </span>
           </Badge>

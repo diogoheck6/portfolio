@@ -1,8 +1,7 @@
-// src/app/_components/projects/ProjectTabs.tsx
 "use client";
 
 import { useMemo, useState } from "react";
-import type { Project } from "@/app/projects/projects.data";
+import { PROJECT_GROUPS, type Project } from "@/app/projects/projects.data";
 import { ProjectCard } from "./ProjectCard";
 
 type Group = "automation" | "personal";
@@ -10,41 +9,73 @@ type Group = "automation" | "personal";
 export function ProjectTabs({ projects }: { projects: Project[] }) {
   const [active, setActive] = useState<Group>("automation");
 
+  const currentGroup = PROJECT_GROUPS.find((g) => g.key === active);
+
   const filtered = useMemo(() => {
     return projects
       .filter((p) => p.group === active)
       .sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
   }, [active, projects]);
 
-  const tabs: { key: Group; label: string }[] = [
-    { key: "automation", label: "Automation Systems (Core)" },
-    { key: "personal", label: "Personal Projects" },
-  ];
+  const featuredProject = filtered.find((p) => p.featured);
+  const regularProjects = filtered.filter((p) => !p.featured);
 
   return (
-    <>
-      <div className="mt-10 flex gap-3 flex-wrap">
-        {tabs.map((t) => (
-          <button
-            key={t.key}
-            onClick={() => setActive(t.key)}
-            className={`text-sm px-3 py-1 rounded-md border transition
-              ${
-                active === t.key
-                  ? "border-white text-white"
-                  : "border-zinc-800 text-zinc-400 hover:text-white"
+    <section className="mt-12">
+      <div className="flex flex-wrap gap-3">
+        {PROJECT_GROUPS.map((group) => {
+          const isActive = active === group.key;
+
+          return (
+            <button
+              key={group.key}
+              onClick={() => setActive(group.key)}
+              className={`rounded-md border px-3 py-2 text-sm transition ${
+                isActive
+                  ? "border-white bg-white text-zinc-950"
+                  : "border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-white"
               }`}
-          >
-            {t.label}
-          </button>
-        ))}
+            >
+              {group.title}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((p) => (
-          <ProjectCard key={`${p.group}-${p.title}`} p={p} />
-        ))}
-      </div>
-    </>
+      {currentGroup ? (
+        <div className="mt-5 max-w-3xl">
+          <p className="text-sm leading-relaxed text-zinc-400">
+            {currentGroup.description}
+          </p>
+        </div>
+      ) : null}
+
+      {filtered.length > 0 ? (
+        <>
+          {featuredProject ? (
+            <div className="mt-8">
+              <ProjectCard p={featuredProject} />
+            </div>
+          ) : null}
+
+          {regularProjects.length > 0 ? (
+            <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
+              {regularProjects.map((project) => (
+                <ProjectCard
+                  key={`${project.group}-${project.title}`}
+                  p={project}
+                />
+              ))}
+            </div>
+          ) : null}
+        </>
+      ) : (
+        <div className="mt-8 rounded-lg border border-dashed border-zinc-800 bg-zinc-900/20 p-6">
+          <p className="text-sm text-zinc-400">
+            No projects available in this category yet.
+          </p>
+        </div>
+      )}
+    </section>
   );
 }
