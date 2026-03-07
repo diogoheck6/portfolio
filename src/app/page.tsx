@@ -6,7 +6,7 @@ export default function Home() {
     <section className="py-20">
       <div className="max-w-3xl">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
-          Python Automation Engineer
+          Automation Engineer
         </h1>
 
         <p className="mt-5 text-zinc-400 text-lg leading-relaxed">
@@ -17,7 +17,7 @@ export default function Home() {
         <p className="mt-5 flex flex-wrap items-center gap-2 rounded-md border border-zinc-800 bg-zinc-900/30 px-3 py-2 text-sm text-zinc-200 w-fit">
           <span className="text-zinc-400">Impact:</span>
           <span>
-            Automations I built have reduced up to{" "}
+            Some of the automations I built have reduced up to{" "}
             <span className="font-semibold">~3 hours</span> of manual work per
             analyst.
           </span>
