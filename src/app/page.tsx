@@ -1,55 +1,72 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <section className="py-20 md:py-28">
       <div className="max-w-4xl">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-          Software Engineer
-        </p>
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
+          <div className="flex-1 min-w-0">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+              Software Engineer
+            </p>
 
-        <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl md:text-7xl">
-          I build software that automates business operations.
-        </h1>
+            <h1 className="mt-5 text-5xl font-semibold tracking-tight text-white sm:text-6xl md:text-7xl">
+              I build software that automates business operations.
+            </h1>
 
-        <p className="mt-7 max-w-3xl text-lg leading-relaxed text-zinc-400 md:text-xl">
-          I build automation and business systems that solve real operational
-          problems — designing automation pipelines, integrations, and internal
-          tools that eliminate manual work and directly impact efficiency and
-          decision-making.
-        </p>
+            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-zinc-400 md:text-xl">
+              I build automation and business systems that solve real operational
+              problems — designing automation pipelines, integrations, and
+              internal tools that eliminate manual work and directly impact
+              efficiency and decision-making.
+            </p>
 
-        <div className="mt-7 flex flex-wrap items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/40 px-4 py-3 text-sm text-zinc-200 w-fit">
-          <span className="font-medium text-zinc-500">Impact</span>
-          <span className="text-zinc-600">•</span>
-          <span>
-            Some systems I built reduced up to{" "}
-            <span className="font-semibold text-white">
-              ~3 hours of manual work
-            </span>{" "}
-            per analyst per day.
-          </span>
-        </div>
+            <div className="mt-7 flex flex-wrap items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/40 px-4 py-3 text-sm text-zinc-200 w-fit">
+              <span className="font-medium text-zinc-500">Impact</span>
+              <span className="text-zinc-600">•</span>
+              <span>
+                Some systems I built reduced up to{" "}
+                <span className="font-semibold text-white">
+                  ~3 hours of manual work
+                </span>{" "}
+                per analyst per day.
+              </span>
+            </div>
 
-        <p className="mt-5 text-sm text-zinc-500">
-          Python • FastAPI • PostgreSQL • SQL • TypeScript • React • Next.js •
-          Docker
-        </p>
+            <p className="mt-5 text-sm text-zinc-500">
+              Python • FastAPI • PostgreSQL • SQL • TypeScript • React • Next.js
+              • Docker
+            </p>
 
-        <div className="mt-10 flex flex-wrap gap-4">
-          <Link
-            href="/projects"
-            className="rounded-md bg-white px-4 py-2.5 text-sm font-medium text-zinc-950 transition hover:opacity-90"
-          >
-            View Projects
-          </Link>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                href="/projects"
+                className="rounded-md bg-white px-4 py-2.5 text-sm font-medium text-zinc-950 transition hover:opacity-90"
+              >
+                View Projects
+              </Link>
 
-          <Link
-            href="/about"
-            className="rounded-md border border-zinc-800 px-4 py-2.5 text-sm text-zinc-200 transition hover:border-zinc-700 hover:text-white"
-          >
-            About Me
-          </Link>
+              <Link
+                href="/about"
+                className="rounded-md border border-zinc-800 px-4 py-2.5 text-sm text-zinc-200 transition hover:border-zinc-700 hover:text-white"
+              >
+                About Me
+              </Link>
+            </div>
+          </div>
+
+          <div className="shrink-0 lg:pt-3">
+            <Image
+              src="/images/profile/foto.jpeg"
+              alt="Diogo Rodrigues"
+              width={220}
+              height={260}
+              priority
+              sizes="220px"
+              className="rounded-2xl object-cover object-top w-[160px] h-[190px] sm:w-[200px] sm:h-[240px] lg:w-[220px] lg:h-[260px] ring-1 ring-zinc-700/50 grayscale hover:grayscale-0 transition-all duration-700"
+            />
+          </div>
         </div>
 
         <div className="mt-16 grid gap-4 sm:grid-cols-3">
@@ -128,6 +145,31 @@ export default function Home() {
                 Read case study →
               </Link>
             </div>
+          </div>
+        </div>
+
+        <div className="relative mt-16 overflow-hidden rounded-2xl border border-zinc-800 min-h-[200px] md:min-h-[240px]">
+          <Image
+            src="/images/backgrounds/tech-meeting.png"
+            alt="Business automation workflow"
+            fill
+            sizes="(max-width: 1024px) 100vw, 896px"
+            className="object-cover opacity-[0.18] saturate-50"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/90 via-zinc-950/60 to-zinc-950/20" />
+          <div className="relative z-10 p-7 md:p-10">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
+              How I approach the work
+            </p>
+            <p className="mt-3 max-w-lg text-lg font-semibold leading-snug text-white">
+              Every system starts from a real business problem — not a
+              technology choice.
+            </p>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-zinc-400">
+              I map the operational workflow first, identify where friction
+              lives, then design the software to remove it. Technology comes
+              last.
+            </p>
           </div>
         </div>
 
