@@ -1,33 +1,15 @@
-import Image from "next/image";
-
 export default function About() {
   return (
     <section className="py-16 md:py-20">
       <div className="max-w-3xl">
-        <div className="flex flex-row items-center justify-between gap-6">
-          <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-              About
-            </p>
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+          About
+        </p>
 
-            <h1 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-5xl">
-              Software engineer focused on building automation and business
-              systems that solve real operational problems.
-            </h1>
-          </div>
-
-          <div className="shrink-0">
-            <Image
-              src="/images/profile/foto.jpeg"
-              alt="Diogo Rodrigues"
-              width={160}
-              height={190}
-              priority
-              sizes="160px"
-              className="rounded-2xl object-cover object-top w-[80px] h-[96px] sm:w-[130px] sm:h-[156px] md:w-[150px] md:h-[180px] ring-1 ring-zinc-700/50"
-            />
-          </div>
-        </div>
+        <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+          Software engineer focused on building automation and business
+          systems that solve real operational problems.
+        </h1>
 
         <div className="mt-8 space-y-5 text-base leading-relaxed text-zinc-400">
           <p>
