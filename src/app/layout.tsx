@@ -60,9 +60,9 @@ export default function RootLayout({
             fill
             priority
             sizes="100vw"
-            className="fixed inset-0 object-cover object-center opacity-[0.13] saturate-50 -z-10"
+            className="fixed inset-0 object-cover object-center opacity-[0.28] saturate-50 -z-10"
           />
-          <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_80%_100%_at_50%_40%,rgba(9,9,11,0.82)_0%,rgba(9,9,11,0.55)_50%,rgba(9,9,11,0.18)_100%)]" />
+          <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_55%_90%_at_50%_45%,rgba(9,9,11,0.93)_0%,rgba(9,9,11,0.80)_45%,rgba(9,9,11,0.25)_75%,rgba(9,9,11,0.05)_100%)]" />
           <SiteHeader />
 
           <main id="content" className="mx-auto max-w-5xl px-6">

@@ -53,7 +53,7 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-6 flex flex-wrap justify-center gap-2">
               {STACK.map(({ icon: Icon, label }) => (
                 <span
                   key={label}
