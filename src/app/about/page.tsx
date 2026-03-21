@@ -7,23 +7,20 @@ export default function About() {
         </p>
 
         <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
-          Software engineer focused on financial systems, accounting automation,
-          and system integration.
+          Software engineer focused on building automation and business systems
+          that solve real operational problems.
         </h1>
 
         <div className="mt-8 space-y-5 text-base leading-relaxed text-zinc-400">
           <p>
-            I am a Software Engineer focused on financial systems, accounting
-            automation, and system integration — building tools that eliminate
-            manual work, connect disparate systems, and improve operational
-            efficiency in process-heavy business environments.
+            I am a Software Engineer focused on building automation and business
+            systems that solve real operational problems.
           </p>
 
           <p>
             My career started in 2021 inside an accounting firm, where I began
-            developing Python automation tools to parse SPED tax files, collect
-            fiscal data from government portals, and cross-validate information
-            across multiple public data sources.
+            developing automation solutions to process large fiscal datasets and
+            eliminate repetitive manual work.
           </p>
 
           <p>
@@ -31,34 +28,45 @@ export default function About() {
             <span className="font-medium text-zinc-300">
               ~3 hours of manual work per analyst
             </span>{" "}
-            by automating data collection, validation, and Excel-based fiscal
-            reconciliation workflows.
+            by automating the collection, validation, and reconciliation of
+            fiscal data across multiple sources.
           </p>
 
           <p>
-            Since then, I have worked on automation pipelines, desktop
-            automation in legacy ERP environments, internal dashboards, and data
-            processing systems that help accounting and operational teams work
-            with more speed, consistency, and visibility.
+            Since then, I have specialized in transforming business requirements
+            into reliable software systems — designing automation pipelines,
+            integrations, and internal tools that directly impact efficiency and
+            decision-making.
           </p>
 
           <p>
-            In recent years, I have also expanded into TypeScript, React, and
-            Next.js to build web interfaces that complement automation systems
-            and turn operational data into usable internal tools.
+            I approach software development with a strong focus on business
+            logic, system design, and sustainable architecture, prioritizing
+            clarity, maintainability, and long-term value over specific
+            technologies.
           </p>
 
           <p>
-            My goal is simple: build reliable, maintainable systems that create
-            measurable impact in real business operations.
+            While I have experience with Python, APIs, and modern web
+            technologies (TypeScript, React, Next.js), I see technology as a
+            tool — not the identity.
+          </p>
+
+          <p>
+            My goal is simple:{" "}
+            <span className="font-medium text-zinc-300">
+              translate real-world requirements into software that delivers
+              measurable impact and removes friction from business operations.
+            </span>
           </p>
         </div>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-3">
           <div className="rounded-lg border border-zinc-800 bg-zinc-900/20 p-5">
-            <p className="text-sm font-medium text-white">Core Stack</p>
+            <p className="text-sm font-medium text-white">Approach</p>
             <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-              Python, SQL, APIs, TypeScript, React, and Next.js.
+              Business-driven design, sustainable architecture, clarity and
+              long-term value over specific technologies.
             </p>
           </div>
 
@@ -80,21 +88,16 @@ export default function About() {
         </div>
 
         <div className="mt-12 rounded-lg border border-zinc-800 bg-zinc-900/20 p-6">
-          <p className="text-sm font-medium text-white">What I care about</p>
+          <p className="text-sm font-medium text-white">
+            My work is centered on
+          </p>
 
           <ul className="mt-4 space-y-3 text-sm leading-relaxed text-zinc-400">
-            <li>
-              • Building systems that remove repetitive work and reduce
-              operational friction
-            </li>
-            <li>
-              • Connecting legacy workflows with modern tools, dashboards, and
-              integrations
-            </li>
-            <li>
-              • Writing software that is reliable, maintainable, and useful in
-              real business contexts
-            </li>
+            <li>• Process automation</li>
+            <li>• System integration and data reconciliation</li>
+            <li>• Business-driven software design</li>
+            <li>• Automation pipelines and reporting systems</li>
+            <li>• Internal tools and operational dashboards</li>
           </ul>
         </div>
       </div>

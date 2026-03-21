@@ -13,10 +13,10 @@ export default function Home() {
         </h1>
 
         <p className="mt-7 max-w-3xl text-lg leading-relaxed text-zinc-400 md:text-xl">
-          I build automation systems, full-stack internal tools, and system
-          integrations for financial and accounting operations — eliminating
-          manual work, connecting data across systems, and shipping reliable
-          software for real business workflows.
+          I build automation and business systems that solve real operational
+          problems — designing automation pipelines, integrations, and internal
+          tools that eliminate manual work and directly impact efficiency and
+          decision-making.
         </p>
 
         <div className="mt-7 flex flex-wrap items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/40 px-4 py-3 text-sm text-zinc-200 w-fit">
@@ -56,24 +56,24 @@ export default function Home() {
           <div className="rounded-xl border border-zinc-800 bg-zinc-900/20 p-5">
             <p className="text-sm font-medium text-white">Focus</p>
             <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-              Automation, integrations, and business systems built for real
-              operational workflows.
+              Process automation, system integration, and business-driven
+              software design.
             </p>
           </div>
 
           <div className="rounded-xl border border-zinc-800 bg-zinc-900/20 p-5">
             <p className="text-sm font-medium text-white">Background</p>
             <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-              4+ years building Python automation and data-processing systems
-              for accounting and business operations.
+              4+ years building automation solutions for accounting and
+              operational environments, starting in 2021.
             </p>
           </div>
 
           <div className="rounded-xl border border-zinc-800 bg-zinc-900/20 p-5">
-            <p className="text-sm font-medium text-white">Now</p>
+            <p className="text-sm font-medium text-white">Approach</p>
             <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-              Building dashboards, automation pipelines, and internal tools with
-              Python, APIs, and Next.js.
+              Business logic first. Technology as a tool, not the identity —
+              clarity, maintainability, and long-term value.
             </p>
           </div>
         </div>
@@ -137,42 +137,41 @@ export default function Home() {
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
             <div>
               <p className="text-sm font-medium text-zinc-200">
-                Automation Systems
+                Process Automation
               </p>
               <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                Python-based workflows that replace repetitive manual tasks and
-                improve consistency in operational processes.
+                Workflows that replace repetitive manual tasks, reduce
+                operational friction, and improve process consistency.
               </p>
             </div>
 
             <div>
               <p className="text-sm font-medium text-zinc-200">
-                Financial Systems
+                System Integration & Data Reconciliation
               </p>
               <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                End-to-end systems for accounting, payroll, and fiscal
-                operations — from data ingestion to validated, exportable
-                outputs.
+                Connecting ERPs, government APIs, and legacy databases into
+                cohesive, auditable data flows.
               </p>
             </div>
 
             <div>
               <p className="text-sm font-medium text-zinc-200">
-                System Integration
+                Automation Pipelines & Reporting
               </p>
               <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                Connecting ERPs, government APIs, legacy databases, and modern
-                web interfaces into cohesive operational workflows.
+                Structured pipelines that collect, validate, transform, and
+                export business data into actionable outputs.
               </p>
             </div>
 
             <div>
               <p className="text-sm font-medium text-zinc-200">
-                Dashboards & Visibility
+                Internal Tools & Operational Dashboards
               </p>
               <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                Web interfaces built with React and Next.js to expose metrics,
-                validation outputs, and operational status.
+                Web interfaces that expose metrics, validation outputs, and
+                operational status to the teams that need them.
               </p>
             </div>
           </div>
