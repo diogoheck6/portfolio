@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TechBadges } from "@/app/_components/projects/TechBadges";
 
 function Section({
   title,
@@ -16,14 +17,6 @@ function Section({
         {children}
       </div>
     </section>
-  );
-}
-
-function Tag({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="rounded-full border border-zinc-800 px-2.5 py-1 text-xs text-zinc-300">
-      {children}
-    </span>
   );
 }
 
@@ -72,17 +65,17 @@ export default function SpedAutomationProject() {
           </p>
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-2">
-          {[
-            "Python",
-            "SPED Parsing",
-            "Web Scraping",
-            "Data Validation",
-            "Excel Reports",
-            "Business Automation",
-          ].map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
-          ))}
+        <div className="mt-6">
+          <TechBadges
+            tech={[
+              "Python",
+              "SPED Parsing",
+              "Web Scraping",
+              "Data Validation",
+              "Excel Reports",
+              "Business Automation",
+            ]}
+          />
         </div>
 
         <Section title="Context">

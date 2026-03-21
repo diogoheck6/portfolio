@@ -62,7 +62,7 @@ export default function RootLayout({
             sizes="100vw"
             className="fixed inset-0 object-cover object-center opacity-[0.13] saturate-50 -z-10"
           />
-          <div className="pointer-events-none fixed inset-0 bg-gradient-to-b from-zinc-950/75 via-zinc-950/50 to-zinc-950/80 -z-10" />
+          <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_80%_100%_at_50%_40%,rgba(9,9,11,0.82)_0%,rgba(9,9,11,0.55)_50%,rgba(9,9,11,0.18)_100%)]" />
           <SiteHeader />
 
           <main id="content" className="mx-auto max-w-5xl px-6">

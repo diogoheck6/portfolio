@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TechBadges } from "@/app/_components/projects/TechBadges";
 
 function Section({
   title,
@@ -16,14 +17,6 @@ function Section({
         {children}
       </div>
     </section>
-  );
-}
-
-function Tag({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="rounded-full border border-zinc-800 px-2.5 py-1 text-xs text-zinc-300">
-      {children}
-    </span>
   );
 }
 
@@ -89,21 +82,21 @@ export default function PayrollAccountingMapperProject() {
           </p>
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-2">
-          {[
-            "Python 3.12",
-            "FastAPI",
-            "asyncpg",
-            "PostgreSQL 17",
-            "Next.js 15",
-            "TypeScript",
-            "React",
-            "Docker",
-            "PM2",
-            "OpenVPN",
-          ].map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
-          ))}
+        <div className="mt-6">
+          <TechBadges
+            tech={[
+              "Python 3.12",
+              "FastAPI",
+              "asyncpg",
+              "PostgreSQL 17",
+              "Next.js 15",
+              "TypeScript",
+              "React",
+              "Docker",
+              "PM2",
+              "OpenVPN",
+            ]}
+          />
         </div>
 
         <Section title="Context">
