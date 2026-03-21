@@ -23,7 +23,7 @@ const STACK = [
 export default function Home() {
   return (
     <section className="py-20 md:py-28">
-      <div className="relative z-10 max-w-3xl">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
           Software Engineer
         </p>
@@ -39,7 +39,7 @@ export default function Home() {
           decision-making.
         </p>
 
-        <div className="mt-7 flex flex-wrap items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/40 px-4 py-3 text-sm text-zinc-200 w-fit">
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/40 px-4 py-3 text-sm text-zinc-200">
           <span className="font-medium text-zinc-500">Impact</span>
           <span className="text-zinc-600">•</span>
           <span>
@@ -51,7 +51,7 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-2">
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
           {STACK.map(({ icon: Icon, label }) => (
             <span
               key={label}
@@ -63,7 +63,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link
             href="/projects"
             className="rounded-md bg-white px-4 py-2.5 text-sm font-medium text-zinc-950 transition hover:opacity-90"
@@ -78,8 +78,10 @@ export default function Home() {
             About Me
           </Link>
         </div>
+      </div>
 
-        <div className="mt-16 grid gap-4 sm:grid-cols-3">
+      <div className="relative z-10 max-w-3xl mx-auto mt-16">
+        <div className="grid gap-4 sm:grid-cols-3">
           <div className="rounded-xl border border-zinc-800 bg-zinc-900/20 p-5">
             <p className="text-sm font-medium text-white">Focus</p>
             <p className="mt-2 text-sm leading-relaxed text-zinc-400">
