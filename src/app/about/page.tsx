@@ -7,15 +7,16 @@ export default function About() {
         </p>
 
         <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
-          Software engineer focused on automation, business systems, and
-          operational efficiency.
+          Software engineer focused on financial systems, accounting automation,
+          and system integration.
         </h1>
 
         <div className="mt-8 space-y-5 text-base leading-relaxed text-zinc-400">
           <p>
-            I am a Software Engineer focused on building automation systems,
-            data pipelines, and business tools that eliminate manual work and
-            improve operational efficiency.
+            I am a Software Engineer focused on financial systems, accounting
+            automation, and system integration — building tools that eliminate
+            manual work, connect disparate systems, and improve operational
+            efficiency in process-heavy business environments.
           </p>
 
           <p>
@@ -64,8 +65,8 @@ export default function About() {
           <div className="rounded-lg border border-zinc-800 bg-zinc-900/20 p-5">
             <p className="text-sm font-medium text-white">Focus Areas</p>
             <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-              Automation, integrations, reconciliation workflows, and internal
-              business systems.
+              Financial systems, accounting automation, process automation, and
+              system integration.
             </p>
           </div>
 

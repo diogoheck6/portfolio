@@ -71,7 +71,7 @@ export function SiteHeader() {
           </span>
 
           <span className="text-[11px] text-zinc-500 transition group-hover:text-zinc-400">
-            Automation • Business Systems
+            Financial Systems · Accounting Automation
           </span>
         </Link>
 

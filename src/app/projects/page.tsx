@@ -10,7 +10,7 @@ export default function ProjectsPage() {
         </p>
 
         <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
-          Automation systems, internal tools, and engineering case studies.
+          Financial systems, automation pipelines, and engineering case studies.
         </h1>
 
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-zinc-400 md:text-lg">
@@ -23,8 +23,8 @@ export default function ProjectsPage() {
           <div className="rounded-lg border border-zinc-800 bg-zinc-900/20 p-5">
             <p className="text-sm font-medium text-white">Focus</p>
             <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-              Automation, integrations, reconciliation workflows, and internal
-              business systems.
+              Financial systems, accounting automation, process automation, and
+              system integration.
             </p>
           </div>
 

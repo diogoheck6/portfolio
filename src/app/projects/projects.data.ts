@@ -58,6 +58,37 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Payroll Accounting Mapper",
+    subtitle:
+      "Automated payroll accounting mapping for multi-client accounting firms",
+    group: "automation",
+    visibility: "Private",
+    status: "Case Study",
+    order: 15,
+    description:
+      "Full-stack web application that reads payroll Excel reports (pay stubs, vacation and 13th salary provisions), resolves accounting mappings by company and cost center, and exports consolidated journal entries formatted for direct import into the accounting system (FPA-ELEVOR).",
+    impact:
+      "A process that took hours per company in Excel now completes in seconds — with full traceability of mapped and unmapped payroll events across the entire client portfolio.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "asyncpg",
+      "PostgreSQL",
+      "Next.js",
+      "TypeScript",
+      "Docker",
+      "PM2",
+    ],
+    links: [
+      {
+        label: "Read case study",
+        href: "/projects/payroll-accounting-mapper",
+        kind: "internal",
+      },
+    ],
+  },
+
+  {
     title: "NFSe XML Automation Pipeline",
     subtitle: "Government API integration, XML processing, and audit workflows",
     group: "automation",
