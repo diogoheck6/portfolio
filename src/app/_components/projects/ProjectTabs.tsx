@@ -60,12 +60,23 @@ export function ProjectTabs({ projects }: { projects: Project[] }) {
 
           {regularProjects.length > 0 ? (
             <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
-              {regularProjects.map((project) => (
-                <ProjectCard
-                  key={`${project.group}-${project.title}`}
-                  p={project}
-                />
-              ))}
+              {regularProjects.map((project, idx) => {
+                const isLoneLast =
+                  regularProjects.length % 2 !== 0 &&
+                  idx === regularProjects.length - 1;
+                return (
+                  <div
+                    key={`${project.group}-${project.title}`}
+                    className={
+                      isLoneLast
+                        ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-10px)]"
+                        : ""
+                    }
+                  >
+                    <ProjectCard p={project} />
+                  </div>
+                );
+              })}
             </div>
           ) : null}
         </>

@@ -9,6 +9,7 @@ import {
 } from "react-icons/si";
 import Image from "next/image";
 import Link from "next/link";
+import { TechBadges } from "@/app/_components/projects/TechBadges";
 
 const STACK = [
   { icon: SiPython, label: "Python" },
@@ -133,8 +134,13 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-4 rounded-2xl border border-zinc-800 bg-zinc-900/20 p-7">
-            <p className="text-2xl font-semibold tracking-tight text-white">
+          <div className="relative mt-4 cursor-pointer rounded-2xl border border-zinc-800 bg-zinc-900/20 p-7 transition-all duration-300 hover:-translate-y-0.5 hover:border-amber-500/40 hover:ring-1 hover:ring-amber-500/30 hover:shadow-xl hover:shadow-amber-500/5 group">
+            <Link
+              href="/projects/payroll-accounting-mapper"
+              className="absolute inset-0 z-0 rounded-2xl"
+              aria-label="View Payroll Accounting Mapper case study"
+            />
+            <p className="text-2xl font-semibold tracking-tight text-white transition group-hover:text-amber-100">
               Payroll Accounting Mapper
             </p>
 
@@ -159,14 +165,23 @@ export default function Home() {
               </span>
             </div>
 
-            <p className="mt-5 text-sm text-zinc-500">
-              Python • FastAPI • PostgreSQL • Next.js • TypeScript • Docker
-            </p>
+            <div className="mt-5 relative z-10">
+              <TechBadges
+                tech={[
+                  "Python",
+                  "FastAPI",
+                  "PostgreSQL",
+                  "Next.js",
+                  "TypeScript",
+                  "Docker",
+                ]}
+              />
+            </div>
 
-            <div className="mt-6">
+            <div className="relative z-10 mt-6">
               <Link
                 href="/projects/payroll-accounting-mapper"
-                className="text-sm text-zinc-300 underline underline-offset-4 transition hover:text-white"
+                className="text-sm text-zinc-400 underline underline-offset-4 transition hover:text-amber-300"
               >
                 Read case study →
               </Link>

@@ -47,6 +47,10 @@ function StatusBadge({ status }: { status?: Project["status"] }) {
 }
 
 export function ProjectCard({ p }: { p: Project }) {
+  const primaryLink = p.links?.find(
+    (l) => l.kind === "internal" || !l.href.startsWith("http"),
+  );
+
   return (
     <div
       className={`
@@ -58,13 +62,21 @@ export function ProjectCard({ p }: { p: Project }) {
         p-6 pt-10
         transition-all duration-300
         hover:-translate-y-1
-        hover:border-zinc-600
-        hover:ring-1 hover:ring-amber-500/20
+        hover:border-amber-500/40
+        hover:ring-1 hover:ring-amber-500/30
         hover:shadow-xl
-        hover:shadow-black/30
+        hover:shadow-amber-500/5
+        ${primaryLink ? "cursor-pointer" : ""}
         ${p.featured ? "border-amber-500/20 ring-1 ring-amber-500/30" : ""}
       `}
     >
+      {primaryLink ? (
+        <Link
+          href={primaryLink.href}
+          className="absolute inset-0 z-0 rounded-xl"
+          aria-label={`View ${p.title}`}
+        />
+      ) : null}
       {p.featured ? (
         <div className="absolute -top-3 left-4 z-10">
           <div className="flex items-center gap-1 rounded-md border border-amber-500/30 bg-amber-500/10 px-2 py-1 text-xs font-medium text-amber-300 shadow-sm backdrop-blur">
@@ -76,7 +88,7 @@ export function ProjectCard({ p }: { p: Project }) {
 
       <div className="flex items-start justify-between gap-4">
         <div>
-          <h3 className="text-lg font-semibold text-zinc-100 transition group-hover:text-white">
+          <h3 className="text-lg font-semibold text-zinc-100 transition group-hover:text-amber-100">
             {p.title}
           </h3>
 
@@ -109,7 +121,7 @@ export function ProjectCard({ p }: { p: Project }) {
       </div>
 
       {p.links?.length ? (
-        <div className="mt-5 flex flex-wrap gap-4">
+        <div className="relative z-10 mt-5 flex flex-wrap gap-4">
           {p.links.map((l) => {
             const isExternal =
               l.kind === "external" || l.href.startsWith("http");
