@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section className="py-16 md:py-20">
       <div className="max-w-3xl">
-        <div className="flex flex-row items-start justify-between gap-6">
+        <div className="flex flex-row items-center justify-between gap-6">
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
               About
@@ -16,7 +16,7 @@ export default function About() {
             </h1>
           </div>
 
-          <div className="shrink-0 pt-1">
+          <div className="shrink-0">
             <Image
               src="/images/profile/foto.jpeg"
               alt="Diogo Rodrigues"
