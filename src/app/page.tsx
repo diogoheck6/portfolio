@@ -7,7 +7,6 @@ import {
   SiNextdotjs,
   SiDocker,
 } from "react-icons/si";
-import Image from "next/image";
 import Link from "next/link";
 import { TechBadges } from "@/app/_components/projects/TechBadges";
 
@@ -24,76 +23,60 @@ const STACK = [
 export default function Home() {
   return (
     <section className="py-20 md:py-28">
-      <div className="relative z-10 max-w-4xl">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
-          <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
-              Software Engineer
-            </p>
+      <div className="relative z-10 max-w-3xl">
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
+          Software Engineer
+        </p>
 
-            <h1 className="mt-5 text-5xl font-semibold tracking-tight text-white sm:text-6xl md:text-7xl">
-              I build software that automates business operations.
-            </h1>
+        <h1 className="mt-5 text-5xl font-semibold tracking-tight text-white sm:text-6xl md:text-7xl">
+          I build software that automates business operations.
+        </h1>
 
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-zinc-400 md:text-xl">
-              I build automation and business systems that solve real
-              operational problems — designing automation pipelines,
-              integrations, and internal tools that eliminate manual work and
-              directly impact efficiency and decision-making.
-            </p>
+        <p className="mt-7 max-w-2xl text-lg leading-relaxed text-zinc-400 md:text-xl">
+          I build automation and business systems that solve real operational
+          problems — designing automation pipelines, integrations, and internal
+          tools that eliminate manual work and directly impact efficiency and
+          decision-making.
+        </p>
 
-            <div className="mt-7 flex flex-wrap items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/40 px-4 py-3 text-sm text-zinc-200 w-fit">
-              <span className="font-medium text-zinc-500">Impact</span>
-              <span className="text-zinc-600">•</span>
-              <span>
-                Some systems I built reduced up to{" "}
-                <span className="font-semibold text-white">
-                  ~3 hours of manual work
-                </span>{" "}
-                per analyst per day.
-              </span>
-            </div>
+        <div className="mt-7 flex flex-wrap items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/40 px-4 py-3 text-sm text-zinc-200 w-fit">
+          <span className="font-medium text-zinc-500">Impact</span>
+          <span className="text-zinc-600">•</span>
+          <span>
+            Some systems I built reduced up to{" "}
+            <span className="font-semibold text-white">
+              ~3 hours of manual work
+            </span>{" "}
+            per analyst per day.
+          </span>
+        </div>
 
-            <div className="mt-6 flex flex-wrap justify-center gap-2">
-              {STACK.map(({ icon: Icon, label }) => (
-                <span
-                  key={label}
-                  className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-1.5 text-xs font-medium text-zinc-300 transition hover:border-zinc-600 hover:text-white"
-                >
-                  <Icon className="text-base" />
-                  {label}
-                </span>
-              ))}
-            </div>
+        <div className="mt-6 flex flex-wrap gap-2">
+          {STACK.map(({ icon: Icon, label }) => (
+            <span
+              key={label}
+              className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-1.5 text-xs font-medium text-zinc-300 transition hover:border-zinc-600 hover:text-white"
+            >
+              <Icon className="text-base" />
+              {label}
+            </span>
+          ))}
+        </div>
 
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link
-                href="/projects"
-                className="rounded-md bg-white px-4 py-2.5 text-sm font-medium text-zinc-950 transition hover:opacity-90"
-              >
-                View Projects
-              </Link>
+        <div className="mt-10 flex flex-wrap gap-4">
+          <Link
+            href="/projects"
+            className="rounded-md bg-white px-4 py-2.5 text-sm font-medium text-zinc-950 transition hover:opacity-90"
+          >
+            View Projects
+          </Link>
 
-              <Link
-                href="/about"
-                className="rounded-md border border-zinc-800 px-4 py-2.5 text-sm text-zinc-200 transition hover:border-zinc-700 hover:text-white"
-              >
-                About Me
-              </Link>
-            </div>
-          </div>
-
-          <div className="shrink-0 lg:pt-3">
-            <Image
-              src="/images/profile/foto.jpeg"
-              alt="Diogo Rodrigues"
-              width={220}
-              height={260}
-              priority
-              sizes="220px"
-              className="rounded-2xl object-cover object-top w-[160px] h-[190px] sm:w-[200px] sm:h-[240px] lg:w-[220px] lg:h-[260px] ring-1 ring-zinc-700/50"
-            />
-          </div>
+          <Link
+            href="/about"
+            className="rounded-md border border-zinc-800 px-4 py-2.5 text-sm text-zinc-200 transition hover:border-zinc-700 hover:text-white"
+          >
+            About Me
+          </Link>
         </div>
 
         <div className="mt-16 grid gap-4 sm:grid-cols-3">
