@@ -1,5 +1,24 @@
+import {
+  SiPython,
+  SiFastapi,
+  SiPostgresql,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiDocker,
+} from "react-icons/si";
 import Image from "next/image";
 import Link from "next/link";
+
+const STACK = [
+  { icon: SiPython, label: "Python" },
+  { icon: SiFastapi, label: "FastAPI" },
+  { icon: SiPostgresql, label: "PostgreSQL" },
+  { icon: SiTypescript, label: "TypeScript" },
+  { icon: SiReact, label: "React" },
+  { icon: SiNextdotjs, label: "Next.js" },
+  { icon: SiDocker, label: "Docker" },
+];
 
 export default function Home() {
   return (
@@ -34,10 +53,17 @@ export default function Home() {
               </span>
             </div>
 
-            <p className="mt-5 text-sm text-zinc-500">
-              Python • FastAPI • PostgreSQL • SQL • TypeScript • React • Next.js
-              • Docker
-            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {STACK.map(({ icon: Icon, label }) => (
+                <span
+                  key={label}
+                  className="flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-1.5 text-xs font-medium text-zinc-300 transition hover:border-zinc-600 hover:text-white"
+                >
+                  <Icon className="text-base" />
+                  {label}
+                </span>
+              ))}
+            </div>
 
             <div className="mt-10 flex flex-wrap gap-4">
               <Link

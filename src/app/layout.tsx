@@ -60,9 +60,9 @@ export default function RootLayout({
             fill
             priority
             sizes="100vw"
-            className="fixed inset-0 object-cover object-center opacity-[0.20] saturate-50 -z-10"
+            className="fixed inset-0 object-cover object-center opacity-[0.13] saturate-50 -z-10"
           />
-          <div className="pointer-events-none fixed inset-0 bg-gradient-to-b from-zinc-950/70 via-zinc-950/40 to-zinc-950/75 -z-10" />
+          <div className="pointer-events-none fixed inset-0 bg-gradient-to-b from-zinc-950/75 via-zinc-950/50 to-zinc-950/80 -z-10" />
           <SiteHeader />
 
           <main id="content" className="mx-auto max-w-5xl px-6">
