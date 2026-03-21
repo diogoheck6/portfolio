@@ -3,17 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28">
-      <Image
-        src="/images/backgrounds/tech-meeting.png"
-        alt=""
-        aria-hidden
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center opacity-[0.06] saturate-50"
-      />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/60 to-zinc-950/90" />
+    <section className="py-20 md:py-28">
       <div className="relative z-10 max-w-4xl">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
           <div className="flex-1 min-w-0">

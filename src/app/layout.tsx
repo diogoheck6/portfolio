@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
 import { SiteHeader } from "@/app/_components/layout/SiteHeader";
 
 const geistSans = Geist({
@@ -51,7 +52,17 @@ export default function RootLayout({
           Skip to content
         </a>
 
-        <div className="min-h-screen">
+        <div className="relative min-h-screen">
+          <Image
+            src="/images/backgrounds/tech-meeting.png"
+            alt=""
+            aria-hidden
+            fill
+            priority
+            sizes="100vw"
+            className="fixed inset-0 object-cover object-center opacity-[0.20] saturate-50 -z-10"
+          />
+          <div className="pointer-events-none fixed inset-0 bg-gradient-to-b from-zinc-950/70 via-zinc-950/40 to-zinc-950/75 -z-10" />
           <SiteHeader />
 
           <main id="content" className="mx-auto max-w-5xl px-6">
