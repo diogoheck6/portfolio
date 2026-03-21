@@ -3,8 +3,18 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="py-20 md:py-28">
-      <div className="max-w-4xl">
+    <section className="relative overflow-hidden py-20 md:py-28">
+      <Image
+        src="/images/backgrounds/tech-meeting.png"
+        alt=""
+        aria-hidden
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center opacity-[0.06] saturate-50"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/60 to-zinc-950/90" />
+      <div className="relative z-10 max-w-4xl">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-zinc-500">
@@ -16,10 +26,10 @@ export default function Home() {
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-zinc-400 md:text-xl">
-              I build automation and business systems that solve real operational
-              problems — designing automation pipelines, integrations, and
-              internal tools that eliminate manual work and directly impact
-              efficiency and decision-making.
+              I build automation and business systems that solve real
+              operational problems — designing automation pipelines,
+              integrations, and internal tools that eliminate manual work and
+              directly impact efficiency and decision-making.
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-2 rounded-xl border border-zinc-800 bg-zinc-900/40 px-4 py-3 text-sm text-zinc-200 w-fit">
@@ -64,7 +74,7 @@ export default function Home() {
               height={260}
               priority
               sizes="220px"
-              className="rounded-2xl object-cover object-top w-[160px] h-[190px] sm:w-[200px] sm:h-[240px] lg:w-[220px] lg:h-[260px] ring-1 ring-zinc-700/50 grayscale hover:grayscale-0 transition-all duration-700"
+              className="rounded-2xl object-cover object-top w-[160px] h-[190px] sm:w-[200px] sm:h-[240px] lg:w-[220px] lg:h-[260px] ring-1 ring-zinc-700/50"
             />
           </div>
         </div>
@@ -145,31 +155,6 @@ export default function Home() {
                 Read case study →
               </Link>
             </div>
-          </div>
-        </div>
-
-        <div className="relative mt-16 overflow-hidden rounded-2xl border border-zinc-800 min-h-[200px] md:min-h-[240px]">
-          <Image
-            src="/images/backgrounds/tech-meeting.png"
-            alt="Business automation workflow"
-            fill
-            sizes="(max-width: 1024px) 100vw, 896px"
-            className="object-cover opacity-[0.18] saturate-50"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/90 via-zinc-950/60 to-zinc-950/20" />
-          <div className="relative z-10 p-7 md:p-10">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">
-              How I approach the work
-            </p>
-            <p className="mt-3 max-w-lg text-lg font-semibold leading-snug text-white">
-              Every system starts from a real business problem — not a
-              technology choice.
-            </p>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-zinc-400">
-              I map the operational workflow first, identify where friction
-              lives, then design the software to remove it. Technology comes
-              last.
-            </p>
           </div>
         </div>
 
