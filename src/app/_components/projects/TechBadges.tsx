@@ -8,12 +8,12 @@ import {
   SiFastapi,
   SiPostgresql,
   SiNodedotjs,
-  SiMicrosoftexcel,
 } from "react-icons/si";
 import {
   Database,
   Cpu,
   FileJson,
+  FileSpreadsheet,
   Globe,
   Server,
   Shield,
@@ -41,7 +41,8 @@ function getIcon(name: string) {
   if (key === "apis" || key === "web scraping") return <Globe size={14} />;
   if (key === "websocket") return <Cpu size={14} />;
   if (key === "node.js") return <SiNodedotjs />;
-  if (key === "excel reports" || key === "excel") return <SiMicrosoftexcel />;
+  if (key === "excel reports" || key === "excel")
+    return <FileSpreadsheet size={14} />;
   if (key === "data pipelines" || key === "data processing")
     return <Layers size={14} />;
   if (key === "data validation" || key === "validation")
